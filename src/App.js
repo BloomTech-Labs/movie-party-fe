@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
+import axios from 'axios'
+import Route from 'react-router-dom'
 import './App.css';
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -13,6 +15,25 @@ function App() {
       </header>
     </div>
   );
+}*/
+
+class App extends Component {
+  componentDidMount() {
+    axios
+    .get('https://movie-party-be-prod.herokuapp.com/api/users')
+    .then(response => console.log(response))
+    .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+    );
+  }
 }
+
 
 export default App;
