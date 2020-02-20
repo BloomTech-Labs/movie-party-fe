@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {connect} from "react-redux"
+import { exampleFunction } from './redux/actions/actions';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,9 +12,16 @@ function App() {
         <p>
           movie party production
         </p>
+        <button onClick={() => props.exampleFunction()}>redux console.log check</button>
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isLoading: state.isLoading
+  }
+}
+
+export default connect(mapStateToProps, {exampleFunction})(App);
