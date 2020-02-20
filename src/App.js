@@ -12,6 +12,10 @@ function App(props) {
         <p>
           movie party production
         </p>
+
+        {/* this button is just a test to see if redux is working,
+        it will be deleted when we add functionality to the app */}
+
         <button onClick={() => props.exampleFunction()}>redux console.log check</button>
       </header>
     </div>
