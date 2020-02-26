@@ -1,14 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {connect} from "react-redux"
 import { exampleFunction } from './redux/actions/actions';
+import Dashboard from './components/Dashboard/Dashboard.js';
+import Movies from './components/Movies/Movies.js';
+import Movie from './components/Movie/Movie.js';
+import LandingPage from './components/LandingPage/LandingPage.js';
+
+import { connect } from "react-redux";
+import { Route } from "react-router-dom";
 
 function App(props) {
   return (
     <div className="App">
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route exact path="/movies" component={Movies} />
+        <Route path="/movie/:id" compoent={Movie} />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           movie party production
         </p>
@@ -28,4 +36,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {exampleFunction})(App);
+export default connect(mapStateToProps, { exampleFunction })(App);
