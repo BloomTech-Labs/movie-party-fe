@@ -7,12 +7,12 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       events: [
-        {title: "scooby doo scary monster"},
-        {title: "scooby doo scary monster TWO!!!"},
-        {title: "scooby doo scary monster 3"},
-        {title: "scooby doo scary monster FOUR???"},
-        {title: "scooby doo scary monster fiv--"},
-        {title: "scooby doo scary monster & six!"},
+        {id: 1, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster"},
+        {id: 2, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster TWO!!!"},
+        {id: 3, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster 3"},
+        {id: 4, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster FOUR???"},
+        {id: 5, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster fiv--"},
+        {id: 6, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster & six!"},
       ],
     }
   }
@@ -23,9 +23,8 @@ class Dashboard extends Component {
         <h1>test</h1>
         <div className="dashboardEventContainer">
           { this.state.events.map(event => {
-            return <EventCard title={event.title}/>
+            return <EventCard key={event.id} title={event.title} date={event.date} time={event.time}/>
           })}
-          
         </div>
       </div>
     )
