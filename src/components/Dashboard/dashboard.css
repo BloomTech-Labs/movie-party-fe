@@ -1,0 +1,25 @@
+.eventCardContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  text-align: left;
+  margin: 15px;
+}
+
+.eventCardImg {
+  width: 250px;
+  height: 350px;
+  background-color: grey;
+}
+
+p {
+  margin-top: 0;
+}
+
+.dashboardEventContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
