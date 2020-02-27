@@ -7,7 +7,7 @@
 }
 
 .eventCardImg {
-  width: 250px;
+  width: 200px;
   height: 350px;
   background-color: grey;
 }
@@ -18,8 +18,9 @@ p {
 
 .dashboardEventContainer {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: left;
+  
   width: 90%;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
