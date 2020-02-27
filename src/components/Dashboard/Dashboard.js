@@ -20,7 +20,12 @@ class Dashboard extends Component {
     console.log(this.state.events)
     return (
       <div>
-        <h1>test</h1>
+        <div className="dashboardHeader">
+          <h3>Upcoming Parties</h3>
+          <h3>Filter</h3>
+          <h3>+</h3>
+        </div>
+
         <div className="dashboardEventContainer">
           { this.state.events.map(event => {
             return <EventCard key={event.id} title={event.title} date={event.date} time={event.time}/>
