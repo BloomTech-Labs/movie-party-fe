@@ -16,16 +16,6 @@ function App(props) {
         <Route path="/dashboard" component={Dashboard} />
         <Route exact path="/movies" component={Movies} />
         <Route path="/movie/:id" compoent={Movie} />
-      <header className="App-header">
-        <p>
-          movie party production
-        </p>
-
-        {/* this button is just a test to see if redux is working,
-        it will be deleted when we add functionality to the app */}
-
-        <button onClick={() => props.exampleFunction()}>redux console.log check</button>
-      </header>
     </div>
   );
 }
