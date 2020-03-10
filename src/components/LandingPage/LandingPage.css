@@ -1,4 +1,5 @@
-
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 
 /* Navbar */
 .navbar-container {
@@ -63,7 +64,7 @@
 /* Movies */
 .movie-container {
   height: 600px;
-  background-color: #EDEDED;
+  background-color: #0D0D0D;
   display: flex;
   justify-content: center;
 }
@@ -73,6 +74,7 @@
   font-size: 28px;
   max-width: 250px;
   line-height: 34px;
+  color: white;
 }
 
 /* HIW */

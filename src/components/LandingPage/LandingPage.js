@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Slider from 'react-slick';
 
 import './LandingPage.css';
 import logo from './assets/logo.png';
@@ -8,6 +10,21 @@ import balloon from './assets/balloon.png';
 import theatre from './assets/theatre.png';
 
 function LandingPage() {
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    // axios.get(`http://data.tmsapi.com/v1.1/movies/showings?startDate=2020-03-06&zip=84109&api_key=bfektnnhgkfb4x7yuqwykfsp`)
+    //   .then(res => {
+    //     return setMovies(res.data)
+    //   })
+  }, [])
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 5
+  }
   return (
     <div className="landing-page-container">
       <nav>
@@ -34,12 +51,46 @@ function LandingPage() {
             <p className="movie-header-title">
               Movie Parties Happening Soon!
             </p>
+            <Slider {...settings}>
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+              <div>
+                <h3>6</h3>
+              </div>
+              <div>
+                <h3>7</h3>
+              </div>
+              <div>
+                <h3>8</h3>
+              </div>
+              <div>
+                <h3>9</h3>
+              </div>
+            </Slider>
+            {/* <div>
+              {movies.map(movie => (
+                <p>{movie.title}</p>
+              ))}
+            </div> */}
           </div>
         </div>
       </section>
 
       <section>
-          <p className="HIW-title">How it works</p>
+        <p className="HIW-title">How it works</p>
       </section>
 
       <section>
