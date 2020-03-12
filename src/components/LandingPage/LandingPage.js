@@ -11,19 +11,19 @@ import theatre from './assets/theatre.png';
 
 function LandingPage() {
   const [movies, setMovies] = useState([])
-
+  console.log(movies)
   useEffect(() => {
-    // axios.get(`http://data.tmsapi.com/v1.1/movies/showings?startDate=2020-03-06&zip=84109&api_key=bfektnnhgkfb4x7yuqwykfsp`)
-    //   .then(res => {
-    //     return setMovies(res.data)
-    //   })
+    axios.get(`http://data.tmsapi.com/v1.1/movies/showings?startDate=2020-03-13&zip=84109&api_key=bfektnnhgkfb4x7yuqwykfsp`)
+      .then(res => {
+        return setMovies(res.data)
+      })
   }, [])
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5
+    slidesToShow: 3,
+    slidesToScroll: 3
   }
   return (
     <div className="landing-page-container">
@@ -51,40 +51,15 @@ function LandingPage() {
             <p className="movie-header-title">
               Movie Parties Happening Soon!
             </p>
-            <Slider {...settings}>
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-              <div>
-                <h3>6</h3>
-              </div>
-              <div>
-                <h3>7</h3>
-              </div>
-              <div>
-                <h3>8</h3>
-              </div>
-              <div>
-                <h3>9</h3>
-              </div>
-            </Slider>
-            {/* <div>
+            <Slider className="slider" {...settings}>
               {movies.map(movie => (
-                <p>{movie.title}</p>
+                <div className="single-movie-container" key={movie.id}>
+                  <h3>{movie.title}</h3>
+                  {/* <img src={movie.preferredImage.uri}/> */}
+                  <p>{movie.releaseDate}</p>
+                </div>
               ))}
-            </div> */}
+            </Slider>
           </div>
         </div>
       </section>
