@@ -10,7 +10,7 @@
     "react-dom": "^16.12.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
+    "react-scripts": "3.4.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
@@ -36,14 +36,25 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^4.0.2",
-    "jest": "^25.1.0"
+    "@cypress/code-coverage": "^1.12.2",
+    "babel-plugin-istanbul": "^6.0.0",
+    "cypress": "^4.1.0",
+    "istanbul-lib-coverage": "^3.0.0",
+    "nyc": "^15.0.0"
   },
   "jest": {
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/vendor/**"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
     ],
+    "plugins": [
+      "istanbul"
+    ]
   }
 }
