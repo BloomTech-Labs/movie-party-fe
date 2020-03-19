@@ -82,16 +82,23 @@ const FormikForm = withFormik({
 },
 
 validationSchema: Yup.object().shape({
-  email: Yup.string()
-    .email("Not a valid email")
-    .required("Please enter your email"),
+  name: Yup.string()
+    .required("Please enter your party's name"),
 
-  password: Yup.string()
-    .min(8, "Password needs to be atleast 8 characters long")
-    .required("Please enter a password"),
+  movie: Yup.string()
+    .required("Please enter your movie"),
 
-  fname: Yup.string()
-      .required("Your first name is required"),
+  location: Yup.string()
+    .required("Please enter your party's location"),
+
+  time: Yup.string()
+    .required("Please enter your party's time"),
+
+  date: Yup.string()
+    .required("Please enter your party's date"),
+  
+  description: Yup.string()
+    .required("Please enter your party's description"),
 })
 })(AddPartyModal)
 
