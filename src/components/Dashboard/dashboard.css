@@ -32,3 +32,15 @@ p {
   margin: 0 auto;
   flex-wrap: wrap;
 }
+
+.createPartyContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
