@@ -1,12 +1,26 @@
 .eventCardContainer {
   display: flex;
-  flex-direction: column;
-  max-width: 20%;
+  flex-direction: row;
+  width: 900%;
   text-align: left;
   margin: 15px;
+  justify-content: space-between;
+  padding: 3%;
+  border: 2px solid lightgray;
 }
 
-.dashboardHeader {      /* this shit took two seconds i wont care if we scrap it ~aiden*/
+.eventCardLeft{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.eventCardInfo{
+  margin: 10px;
+}
+
+
+.dashboardHeader {
   display: flex;
   flex-direction: row;
   width: 90%;
@@ -15,8 +29,8 @@
 }
 
 .eventCardImg {
-  width: 200px;
-  height: 350px;
+  width: 150px;
+  height: 200px;
   background-color: grey;
 }
 

@@ -8,12 +8,12 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       events: [
-        {id: 1, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster"},
-        {id: 2, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster TWO!!!"},
-        {id: 3, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster 3"},
-        {id: 4, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster FOUR???"},
-        {id: 5, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster fiv--"},
-        {id: 6, date: "Febuary 28th", time: "8pm", title: "scooby doo scary monster & six!"},
+        {id: 1, date: "Febuary 23th", time: "8pm", title: "scooby doo scary monster", host: "john", private: true, members: "5"},
+        {id: 2, date: "Febuary 7th", time: "5pm", title: "Joker party", host: "joe", private: false, members: "8"},
+        {id: 3, date: "Febuary 11th", time: "1pm", title: "netflix n chill", host: "bob", private: true, members: "2"},
+        {id: 4, date: "Febuary 10th", time: "9pm", title: "random anime", host: "jake", private: false, members: "6"},
+        {id: 5, date: "Febuary 24th", time: "6pm", title: "sonic night", host: "ron", private: true, members: "13"},
+        {id: 6, date: "Febuary 28th", time: "7pm", title: "scooby doo scary monster 2!!", host: "sam", private: true, members: "16"},
       ],
     }
   }
@@ -29,7 +29,14 @@ class Dashboard extends Component {
       
         <div className="dashboardEventContainer">
           { this.state.events.map(event => {
-            return <EventCard key={event.id} title={event.title} date={event.date} time={event.time}/>
+            return <EventCard 
+              key={event.id}
+              title={event.title} 
+              date={event.date}
+              time={event.time} 
+              host={event.host} 
+              private={event.private} 
+              members={event.members}/>
           })}
         </div>
       </div>
