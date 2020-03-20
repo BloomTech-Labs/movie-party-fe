@@ -27,19 +27,7 @@ class Dashboard extends Component {
           <AddPartyModal />
         </div>
       <PartyMenu />
-        <div className="dashboardEventContainer">
-          { this.state.events.map(event => {
-            return <EventCard 
-              key={event.id}
-              title={event.title} 
-              date={event.date}
-              time={event.time} 
-              host={event.host}
-              location={event.location} 
-              private={event.private} 
-              members={event.members}/>
-          })}
-        </div>
+
       </div>
     )
   }

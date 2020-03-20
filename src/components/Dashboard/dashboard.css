@@ -3,10 +3,10 @@
   flex-direction: row;
   width: 900%;
   text-align: left;
-  margin: 15px;
   justify-content: space-between;
   padding: 3%;
   border: 2px solid lightgray;
+  margin-top: 25px;
 }
 
 .eventCardLeft{
@@ -57,4 +57,9 @@ p {
 label {
   display: flex;
   justify-content: space-between;
+}
+
+.menuContainer {
+  width: 90%;
+  margin: 0 auto;
 }
