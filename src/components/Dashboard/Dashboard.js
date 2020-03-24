@@ -22,8 +22,6 @@ class Dashboard extends Component {
     return (
       <div>
         <div className="dashboardHeader">
-          <h3>Upcoming Parties</h3>
-          <h3>Filter</h3>
           <AddPartyModal />
         </div>
       <PartyMenu />

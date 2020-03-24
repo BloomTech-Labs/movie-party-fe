@@ -47,19 +47,46 @@ p {
   flex-wrap: wrap;
 }
 
+.menuContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.eventCardButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  margin: auto 0;
+}
+
+.eventCardButton {
+  padding: -20px;
+  width: 150px;
+  height: 50px;
+}
+
 .createPartyContainer {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
 }
 
 label {
   display: flex;
   justify-content: space-between;
+  margin: 20px;
+  text-align: center;
 }
 
-.menuContainer {
-  width: 90%;
-  margin: 0 auto;
+.description {
+  height: 200px;
+}
+
+.formikField {
+  padding: 10px;
+  border: solid rgb(201, 201, 201) 1px;
+  background-color: rgb(243, 243, 243);
+  width: 80%;
 }

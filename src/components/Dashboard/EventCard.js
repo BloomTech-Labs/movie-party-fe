@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react'
 
 class EventCard extends Component {
 
@@ -16,8 +17,9 @@ class EventCard extends Component {
             <p>{this.props.members} People Are Attending</p>
           </div>
         </div>
-        <div>
-          <button>more info</button>
+        <div className="eventCardButtonContainer">
+          <Button basic color='red' className="eventCardButton">Invite Friends</Button>
+          <Button basic color='red' className="eventCardButton">More Details</Button>
         </div>
         
       </div>

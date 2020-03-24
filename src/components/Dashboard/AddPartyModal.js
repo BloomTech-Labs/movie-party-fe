@@ -5,7 +5,7 @@ import * as Yup from "yup";
 
 function AddPartyModal({errors, touched}) {
   return(
-    <Modal trigger={<Button>Show Modal</Button>} closeIcon>
+    <Modal trigger={<Button color='red'>New Party</Button>} closeIcon>
       <Header content='Create New Party' />
 
       <Modal.Content>
@@ -16,6 +16,7 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="text"
               name="name"
+              className="formikField"
             />
           </label>
 
@@ -24,6 +25,8 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="text"
               name="movie"
+              placeholder="What movie are you seeing?"
+              className="formikField"
             />
           </label>
 
@@ -32,18 +35,22 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="text"
               name="location"
+              placeholder="Would you like to include a location?"
+              className="formikField"
             />
           </label>
 
           <label>
             Date/Time
             <Field
-              type="text"
+              type="date"
               name="date"
+              className="formikField"
             />
             <Field
-              type="text"
+              type="time"
               name="time"
+              className="formikField"
             />
           </label>
           <label>
@@ -51,6 +58,8 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="text"
               name="description"
+              className="description formikField"
+              component="textarea"
             />
           </label>
           
@@ -94,11 +103,8 @@ validationSchema: Yup.object().shape({
   time: Yup.string()
     .required("Please enter your party's time"),
 
-  date: Yup.string()
+  date: Yup.date()
     .required("Please enter your party's date"),
-  
-  description: Yup.string()
-    .required("Please enter your party's description"),
 })
 })(AddPartyModal)
 
