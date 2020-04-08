@@ -31,7 +31,7 @@ const Register = props => {
   return (
     <div className="authContainer">
       <div className="inner-container">
-        <div className="box">
+        <div className="box register-box">
           <h1>Register</h1>
           <form onSubmit={userRegistration}>
             <label>First Name</label> <br />
@@ -54,7 +54,7 @@ const Register = props => {
               autoComplete="off"
             />
             <br />
-            <label>email</label> <br />
+            <label>Email</label> <br />
             <input
               name="email"
               placeholder="email"
@@ -64,7 +64,7 @@ const Register = props => {
               autoComplete="off"
             />
             <br />
-            <label>password</label> <br />
+            <label>Password</label> <br />
             <input
               name="password"
               placeholder="password"

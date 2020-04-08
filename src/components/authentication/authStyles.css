@@ -19,9 +19,14 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 20px 0px;
   }
+
+  .register-box {
+      height: 520px
+  }
+
   .box h1 {
     text-align: center;
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 30px;
   }
   .box label {

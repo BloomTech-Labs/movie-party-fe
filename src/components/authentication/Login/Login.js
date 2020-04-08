@@ -3,29 +3,29 @@ import authAxios from "../../../utils/authAxios";
 import { Link } from "react-router-dom";
 import "../authStyles.css";
 
-const Login = props => {
+const Login = (props) => {
   const [user, setUser] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
-  const userInput = e => {
+  const userInput = (e) => {
     setUser({
       ...user,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const userLogin = e => {
+  const userLogin = (e) => {
     e.preventDefault();
     authAxios()
-      .post(`https://archlife-be.herokuapp.com/api/auth/login`, user)
-      .then(res => {
+      .post(`https://movie-party-be-stag.herokuapp.com/api/login`, user)
+      .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.token);
-        props.history.push("/demo");
+        props.history.push("/");
       })
-      .catch(err => console.log(err, "for sure error"));
+      .catch((err) => console.log(err, "for sure error"));
   };
 
   return (

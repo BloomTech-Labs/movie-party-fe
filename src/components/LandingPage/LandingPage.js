@@ -13,6 +13,7 @@ function LandingPage() {
           <div className="navbar-logo"><img className="logo" src={logo} alt="placeholder-logo" /></div>
           <div className="navbar-about"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link></div>
           <div className="navbar-login"><Link to="/login" style={{ textDecoration: 'none', color: 'white' }}>Login</Link></div>
+          <div className="navbar-login"><Link to="/register" style={{ textDecoration: 'none', color: 'white' }}>Register</Link></div>
         </div>
       </nav>
       <section>
