@@ -19,8 +19,9 @@
 }
 
 .logo {
-  height: 100px;
-  width: 175px;
+  height: 25px;
+  width: 200px;
+  padding: 25px;
 }
 
 .navbar-login {
@@ -32,10 +33,10 @@
 
 /* Header  */
 .header-container {
-  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
   display: flex;
   align-items: center;
-  object-fit: 'cover';
   justify-content: center;
 }
 
@@ -78,14 +79,13 @@
 .movie-container {
   background-color: black;
   display: flex;
-  justify-content: center;
-  height: 45vh;
+  padding: 25px;
 }
 
 .movie-header{
-  padding: 15px;
+  /* margin: 30px; */
   font-size: 28px;
-  max-width: 250px;
+  width: 100%;
   color: white;
 }
 

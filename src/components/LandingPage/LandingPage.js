@@ -1,43 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Slider from 'react-slick';
 
 import './LandingPage.css';
-import logo from './assets/logo.png';
-import apple from './assets/ios.png';
+import moviepartylogo from './assets/moviepartylogo.png';
 import balloon2 from './assets/balloon2.png';
 import theatre from './assets/theatre.png';
-// import dog from './assets/dogs.png';
-// import spiderman from './assets/spiderman.png';
 import movie1 from './assets/movie1.jpg';
 import movie2 from './assets/movie2.jpg';
-import movie from './assets/movie.png'
+import movie from './assets/movie.png';
+import blackpanther from './assets/blackpanther.jpg';
+import endgame from './assets/endgame.jpg';
+import davincicode from './assets/davincicode.jpg';
+import potc from './assets/potc.jpg';
+import sherlockholmes from './assets/sherlockholmes.jpg';
+import halloween from './assets/halloween.jpg';
+import lotr from './assets/lotr.jpg';
+import tron from './assets/tron.jpg';
+import nationaltreasure from './assets/nationaltreasure.jpg';
 
 function LandingPage() {
   const [movies, setMovies] = useState([])
-  console.log(movies)
-  useEffect(() => {
-    axios.get(`http://data.tmsapi.com/v1.1/movies/showings?startDate=2020-03-27&zip=84109&api_key=bfektnnhgkfb4x7yuqwykfsp`)
-      .then(res => {
-        console.log(res.data[0].preferredImage.uri)
-        return setMovies(res.data)
-      })
-  }, [])
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 3,
+    slidesToScroll: 3
   }
 
-  // var movieData = http://developer.tmsimg.com/' + movie.preferredImage.uri?api_key=bfektnnhgkfb4x7yuqwykfsp
   return (
     <div className="landing-page-container">
       <nav>
         <div className="navbar-container">
-          <div className="navbar-logo"><img className="logo" src={logo} alt="placeholder-logo" /></div>
+          <div className="navbar-logo"><img className="logo" src={moviepartylogo} alt="placeholder-logo" /></div>
           <div className="navbar-about"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link></div>
           <div className="navbar-login"><Link to="/login" style={{ textDecoration: 'none', color: 'white' }}>Login</Link></div>
         </div>
@@ -79,17 +76,58 @@ function LandingPage() {
       <section>
         <div className="movie-container">
           <div className="movie-header">
-            <p className="movie-header-title">
-              Movie Parties Happening Soon!
-            </p>
-            <Slider className="slider" {...settings}>
-              {movies.map(movie => (
-                <div className="single-movie-container" key={movie.rootId}>
-                  <h3>{movie.title}</h3>
-                  <img src={`http://developer.tmsimg.com/${movie.preferredImage.uri}?api_key=bfektnnhgkfb4x7yuqwykfsp`} />
-                  <p>{movie.releaseDate}</p>
-                </div>
-              ))}
+            <div className="movie-header-title" style={{ fontSize: '25px', fontFamily: 'Lato' }}>
+              Check Out Todays
+            </div>
+            <div className="movie-header-title" style={{ fontSize: '40px', fontFamily: 'Lato', color: '#CD1F25' }}>
+              Parties
+            </div>
+            <Slider {...settings}>
+              <div style={{ maxWidth: '100%', height: 'auto' }}>
+                <img src={blackpanther} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Black Panther</div>
+                <div style={{ textAlign: 'center' }}>2016</div>
+              </div>
+              <div style={{ maxWidth: '100%', height: 'auto' }}>
+                <img src={endgame} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Avengers: Endgame</div>
+                <div style={{ textAlign: 'center' }}>2019</div>
+              </div>
+              <div style={{ maxWidth: '100%', height: 'auto' }}>
+                <img src={davincicode} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>The Da Vinci Code</div>
+                <div style={{ textAlign: 'center' }}>2006</div>
+              </div>
+              <div>
+                <img src={potc} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Pirates of the Caribbean: The Curse of the Black Pearl</div>
+                <div style={{ textAlign: 'center' }}>2003</div>
+              </div>
+              <div>
+                <img src={sherlockholmes} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Sherlock Holmes</div>
+                <div style={{ textAlign: 'center' }}>2009</div>
+              </div>
+              <div>
+                <img src={halloween} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Halloween</div>
+                <div style={{ textAlign: 'center' }}>2018</div>
+              </div>
+              <div>
+                <img src={lotr} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>The Lord of the Rings: The Fellowship of the Ring</div>
+                <div style={{ textAlign: 'center' }}>2001</div>
+              </div>
+              <div>
+                <img src={tron} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>Tron: Legacy</div>
+                <div style={{ textAlign: 'center' }}>2010</div>
+              </div>
+              <div>
+                <img src={nationaltreasure} alt="movie" style={{ height: '700px', width: '450px', display: 'block', margin: '0 auto' }} />
+                <div style={{ textAlign: 'center' }}>National Treasure</div>
+                <div style={{ textAlign: 'center' }}>2004</div>
+              </div>
             </Slider>
           </div>
         </div>
