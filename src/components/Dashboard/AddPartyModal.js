@@ -11,14 +11,14 @@ function AddPartyModal({errors, touched}) {
       <Modal.Content>
         
         <Form className="createPartyContainer">
-          <label>
+          {/* <label>
             Name Party
             <Field
               type="text"
               name="name"
-              className="formikField"
+              className="formikField "
             />
-          </label>
+          </label> */}
 
           <label>
             Movie
@@ -45,12 +45,12 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="date"
               name="date"
-              className="formikField"
+              className="formikFieldDate"
             />
             <Field
               type="time"
               name="time"
-              className="formikField"
+              className="formikFieldTime"
             />
           </label>
           <label>
@@ -58,7 +58,7 @@ function AddPartyModal({errors, touched}) {
             <Field
               type="text"
               name="description"
-              className="description formikField"
+              className="formikField description"
               component="textarea"
             />
           </label>
