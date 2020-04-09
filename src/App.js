@@ -16,7 +16,6 @@ import navigation from './components/navigation'
     </div>
   );
 }
-
 class App extends Component {
   componentDidMount() {
     axios
@@ -24,7 +23,6 @@ class App extends Component {
     .then(response => console.log(response))
     .catch(err => console.log(err));
   }
-
   render() {
     return (
       <div className="App">
@@ -48,12 +46,12 @@ function App() {
         </Header>
         <Drawer>
             <Navigation className="navigation-color">
-                <Link exact path to="/"><h1>Upcoming Parties</h1></Link>
-                <Link to="/resume"><h1>Past Parties</h1></Link>
-                <Link to="/projects"><h1>Friends</h1></Link>
-                <Link to="/aboutme"><h1>Films</h1></Link>
-                <Link to="/contact"><h1>WatchList</h1></Link>
-                <Link to="/contact"><h1>Create New Party</h1></Link>
+                <Link exact path to="/Upcoming"><h1>Upcoming Parties</h1></Link>
+                <Link to="/Past"><h1>Past Parties</h1></Link>
+                <Link to="/Friends"><h1>Friends</h1></Link>
+                <Link to="/Films"><h1>Films</h1></Link>
+                <Link to="/Watchlist"><h1>WatchList</h1></Link>
+                <Link to="/NewParty"><h1>Create New Party</h1></Link>
             </Navigation>
         </Drawer>
     </Layout>
@@ -64,5 +62,3 @@ function App() {
 }
 
 export default App;
-
-
