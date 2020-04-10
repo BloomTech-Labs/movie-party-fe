@@ -80,10 +80,10 @@
   background-color: black;
   display: flex;
   padding: 25px;
+
 }
 
 .movie-header{
-  /* margin: 30px; */
   font-size: 28px;
   width: 100%;
   color: white;
