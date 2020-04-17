@@ -5,21 +5,12 @@ import * as Yup from "yup";
 
 function AddPartyModal({errors, touched}) {
   return(
-    <Modal trigger={<Button color='red'>New Party</Button>} closeIcon>
+    <Modal trigger={<Button  color='red'>New Party</Button>} closeIcon>
       <Header content='Create New Party' />
 
       <Modal.Content>
         
         <Form className="createPartyContainer">
-          {/* <label>
-            Name Party
-            <Field
-              type="text"
-              name="name"
-              className="formikField "
-            />
-          </label> */}
-
           <label>
             Movie
             <Field
