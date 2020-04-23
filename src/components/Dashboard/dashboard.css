@@ -1,0 +1,120 @@
+.eventCardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 900%;
+  text-align: left;
+  justify-content: space-between;
+  padding: 3%;
+  border: 2px solid lightgray;
+  margin-top: 25px;
+}
+
+.eventCardLeft{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.eventCardInfo{
+  margin: 10px;
+}
+
+
+.dashboardHeader {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto 0;
+  padding-top: 80px;
+  justify-content: center;
+  z-index: 10;
+}
+
+.eventCardImg {
+  width: 150px;
+  height: 200px;
+  background-color: grey;
+}
+
+p {
+  margin-top: 0;
+}
+
+.dashboardEventContainer {
+  display: flex;
+  justify-content: left;
+  
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.menuContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.eventCardButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  margin: auto 0;
+}
+
+.eventCardButton {
+  padding: -20px;
+  width: 150px;
+  height: 50px;
+}
+
+.createPartyContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px ;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.description {
+  height: 200px;
+  width: 100%;
+}
+
+.formikField {
+  padding: 10px;
+  border: solid #DBDBDB 1px;
+  background-color: #FAFAFA;
+  width: 80%;
+  font-size: 1.2rem;
+  margin: -9px 0 0 20px;
+  color: #757575;
+}
+
+.formikFieldDate {
+  padding: 10px;
+  border: solid #DBDBDB 1px;
+  background-color: #FAFAFA;
+  width: 37%;
+  font-size: 1.2rem;
+  margin: 0 0 0 20px;
+  color: #757575;
+}
+
+.formikFieldTime {
+  padding: 10px;
+  border: solid #DBDBDB 1px;
+  background-color: #FAFAFA;
+  width: 30%;
+  font-size: 1.2rem;
+  margin: 0 9% 0 5%;
+  color: #757575;
+}
