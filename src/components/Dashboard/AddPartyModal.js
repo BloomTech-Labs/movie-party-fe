@@ -53,7 +53,28 @@ function AddPartyModal({errors, touched}) {
               component="textarea"
             />
           </label>
-          
+          <label>
+            Private
+            <Field
+              type="checkbox"
+              name="privateParty"
+              className="formikField"
+              component="input"
+
+            />
+          </label>
+          <label>
+            Zoom Link
+            <Field
+              type="text"
+              name="zoomLink"
+              className="formikField zoomLink"
+              placeholder="Schedule a zoom!"
+            />
+          </label>
+          <Button color='red' style={{margin: "10px auto"}}>
+          Create
+          </Button>
         </Form>
         {touched.name && errors.name && <p className="error">{errors.name}</p>} 
         {touched.movie && errors.movie && <p className="error">{errors.movie}</p>}
@@ -61,23 +82,23 @@ function AddPartyModal({errors, touched}) {
         {touched.date && errors.date && <p className="error">{errors.date}</p>}
         {touched.time && errors.time && <p className="error">{errors.time}</p>}
         {touched.description && errors.description && <p className="error">{errors.description}</p>}
-        <Button color='green'>
-          <Icon name='checkmark' /> Create
-        </Button>
+        
       </Modal.Content>
     </Modal>
   )
 }
 
 const FormikForm = withFormik({
-  mapPropsToValues({ name, movie, location, date, time, description }) {
+  mapPropsToValues({ name, movie, location, date, time, description, privateParty, zoomLink, }) {
     return {
         name: name || "",
         movie: movie || "",
         location: location || "",
         date: date || "",
         time: time || "",
-        description: description || ""
+        description: description || "",
+        privateParty: privateParty || false,
+        zoomLink: zoomLink || ""
     };
 },
 

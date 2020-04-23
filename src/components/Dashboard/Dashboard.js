@@ -22,10 +22,14 @@ class Dashboard extends Component {
     return (
       <div>
         <div className="dashboardHeader">
-        <AddPartyModal />
+          <AddPartyModal />
         </div>
-      <PartyMenu />
-      
+        
+        <PartyMenu />
+        
+        <div className="dashboardHeader">
+          <AddPartyModal />
+        </div>
 
       </div>
     )
