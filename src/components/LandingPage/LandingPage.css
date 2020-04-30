@@ -1,4 +1,4 @@
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 /* Navbar */
@@ -19,7 +19,7 @@
 }
 
 .logo {
-  height: 25px;
+  height: 70px;
   width: 200px;
   padding: 25px;
 }
@@ -57,8 +57,8 @@
   border-radius: 5px;
   font-family: Lato;
   padding: 10px;
-  background: #CD1F25;
-  border-color: #CD1F25;
+  background: #cd1f25;
+  border-color: #cd1f25;
   color: white;
   cursor: pointer;
 }
@@ -69,7 +69,7 @@
   font-size: 20px;
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .header-container {
     padding: 20px;
   }
@@ -80,10 +80,9 @@
   background-color: black;
   display: flex;
   padding: 25px;
-
 }
 
-.movie-header{
+.movie-header {
   font-size: 28px;
   width: 100%;
   color: white;
@@ -92,7 +91,7 @@
 /* HIW */
 
 .HIW-paragraph-container {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .paragraphs {
@@ -124,7 +123,7 @@
   justify-content: space-around;
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .paragraphs {
     display: flex;
     flex-direction: column;
@@ -143,7 +142,7 @@
   }
 }
 
-@media(max-width: 930px){
+@media (max-width: 930px) {
   .paragraphs {
     display: flex;
     width: 50%;
@@ -166,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .bottom-info-left {
@@ -189,22 +188,22 @@
 .bottom-button {
   font-size: 20px;
   border-radius: 5px;
-  border-color: #CD1F25;
+  border-color: #cd1f25;
   color: white;
   padding: 15px;
-  background: #CD1F25;
+  background: #cd1f25;
   cursor: pointer;
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .bottom-container {
     padding: 20px;
   }
-  .bottom-paragraphs{
+  .bottom-paragraphs {
     display: flex;
     width: 100%;
   }
-  .bottom-info-right{
+  .bottom-info-right {
     display: none;
   }
 }
@@ -219,7 +218,7 @@
 .footer-left {
   margin: 0;
   padding: 0;
-  width:40%;
+  width: 40%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

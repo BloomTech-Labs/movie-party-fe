@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="demo-big-content">
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <Route exact path="/" component={LandingPage} />
         <Route path="/dashboard" component={Dashboard} />
         <Route exact path="/movies" component={Movies} />
