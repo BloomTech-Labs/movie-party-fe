@@ -1,39 +1,21 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import Route from 'react-router-dom'
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import styled from 'styled-components';
-const Styles = styled.div`
-  .navbar { background-color: #222; }
-  a, .navbar-nav, .navbar-light .nav-link {
-    color: #9FFFCB;
-    &:hover { color: white; }
-  }
-  .navbar-brand {
-    font-size: 1.4em;
-    color: #9FFFCB;
-    &:hover { color: white; }
-  }
-  .form-center {
-    position: absolute !important;
-    left: 25%;
-    right: 25%;
-  }
-`;
+import {Link} from 'react-router-dom';
+import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+
 export const NavigationBar = () => (
-  <Styles>
-    <Navbar expand="lg">
-      <Navbar.Brand href="/">Tutorial</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      <Form className="form-center">
-        <FormControl type="text" placeholder="Search" className="" />
-      </Form>
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  </Styles>
+    <Layout>
+    <Header className="header-color" scroll>
+        <h1>MOVIE PARTY</h1>
+    </Header>
+    <Drawer>
+        <Navigation className="navigation-color">
+            <Link exact path to="/Upcoming"><h1>Upcoming Parties</h1></Link>
+            <Link to="/Past"><h1>Past Parties</h1></Link>
+            <Link to="/Friends"><h1>Friends</h1></Link>
+            <Link to="/Films"><h1>Films</h1></Link>
+            <Link to="/Watchlist"><h1>WatchList</h1></Link>
+            <Link to="/NewParty"><h1>Create New Party</h1></Link>
+        </Navigation>
+    </Drawer>
+</Layout>
 )

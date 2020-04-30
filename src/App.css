@@ -1,0 +1,95 @@
+.header-color{
+
+  background:red;
+  justify-content:center
+  }
+.material-icons{
+  color:black;
+}
+.mdl-layout__header-row{
+  background:white
+}
+
+h1{
+  color:black;
+  margin: center
+}
+  
+  .navigation-color{
+   
+    width: 100%;
+    height: 100%;
+    color: black;
+  }
+   
+  .navigation-color h1{
+    font-size: 20px;
+    
+    color: black;
+    height: 60%;
+  }
+  
+
+  .banner-text h1 {
+    font-size: 66px;
+    font-weight: bold;
+    color: black
+  }
+  .banner-text hr {
+    border-top: 5px solid white;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .banner-text p {
+    color: black;
+    font-size: 20px;
+    padding: 1em;
+  }
+  
+  
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .social-links i {
+    color: black;
+    font-size: 5em;
+    padding: 8px;
+  }
+  
+  
+        
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
